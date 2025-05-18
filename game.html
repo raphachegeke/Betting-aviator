@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aviator Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Aviator Game</h1>
+      <div>Player: <span id="playerName"></span></div>
+      <div>Balance: $<span id="balance">0.00</span></div>
+    </header>
+
+<div class="controls">
+  <button id="withdrawBtn">Withdraw</button>
+  <button id="resetBtn">Reset Balance</button>
+  <button id="logoutBtn">Logout</button>
+</div>
+    
+    <div id="countdown"></div>
+
+    <div class="bet-area">
+      <input type="number" id="betAmount" placeholder="Bet Amount" min="1" />
+      <button id="startBtn">Start Game</button>
+      <button id="cashoutBtn" disabled>Cash Out</button>
+    </div>
+
+    <div>
+      Multiplier: <span id="multiplier">1.00</span>x
+    </div>
+
+    <div id="result"></div>
+    <div id="crashHistory"></div>
+
+    <section id="scoreboard">
+      <h3>Scoreboard (Last 5 Wins)</h3>
+      <ol id="scoreList"></ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

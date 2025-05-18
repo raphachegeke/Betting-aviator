@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.login-container, main {
+  margin: 50px auto;
+  max-width: 400px;
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #f39c12cc;
+}
+
+input[type="text"], input[type="number"] {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 0 10px #f39c12;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background: #f39c12;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, box-shadow 0.6s ease-in-out;
+  box-shadow: 0 0 10px #f39c12;
+  animation: glowPulse 2s infinite alternate;
+}
+
+button:hover {
+  background: #e67e22;
+  box-shadow: 0 0 20px #f39c12, 0 0 30px #f39c12;
+}
+
+header div {
+  margin-top: 10px;
+}
+
+.bet-area {
+  margin: 20px 0;
+}
+
+#crashHistory {
+  margin-top: 20px;
+}
+
+.crash-value {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background: #f39c12;
+  color: #111;
+  border-radius: 4px;
+  box-shadow: 0 0 8px #f39c12;
+}
+
+#scoreboard {
+  margin-top: 40px;
+  background: #333;
+  padding: 15px;
+  border-radius: 8px;
+  color: #f1c40f;
+  box-shadow: 0 0 15px #f1c40f;
+}
+
+#scoreboard ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* Multiplier glow & pulse */
+#multiplier {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #f39c12;
+  text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+  animation: multiplierPulse 1.5s infinite alternate;
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 8px #f39c12;
+  }
+  to {
+    box-shadow: 0 0 20px #f39c12, 0 0 30px #f39c12;
+  }
+}
+
+/* Multiplier pulse */
+@keyframes multiplierPulse {
+  from {
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 0 0 30px #f39c12, 0 0 40px #f39c12;
+    transform: scale(1.1);
+  }
+}
+
+/* Crash effect */
+.crash-flash {
+  animation: crashFlash 0.6s ease forwards;
+}
+
+@keyframes crashFlash {
+  0% {
+    background-color: transparent;
+    color: #f39c12;
+    text-shadow: 0 0 10px #f39c12;
+  }
+  50% {
+    background-color: #e74c3c;
+    color: white;
+    text-shadow: 0 0 30px #e74c3c;
+  }
+  100% {
+    background-color: transparent;
+    color: #f39c12;
+    text-shadow: 0 0 10px #f39c12;
+  }
+}
+
+#countdown {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-top: 10px;
+}
+.controls button {
+  margin: 5px;
+  padding: 6px 10px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.controls button:hover {
+  background: crimson;
+}
