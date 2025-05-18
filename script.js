@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("username");
-    location.href = "login.html";
+    location.href = "index.html";
   });
 
   resetBtn.addEventListener("click", () => {
